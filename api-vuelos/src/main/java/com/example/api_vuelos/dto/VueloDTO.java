@@ -8,6 +8,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 public class VueloDTO {
+    private Integer idVuelo;
     private String nombreV;
     private String aerolinea;
     private String ciudadSalida;

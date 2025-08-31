@@ -12,6 +12,7 @@ public class VueloUtil {
 
     public static VueloDTO convetirAVueloDTO(Vuelo vuelo) {
         VueloDTO vueloDTO = new VueloDTO();
+        vueloDTO.setIdVuelo(vuelo.getId());
         vueloDTO.setNombreV(vuelo.getNombreVuelo());
         vueloDTO.setAerolinea(vuelo.getEmpresa());
         vueloDTO.setCiudadLlegada(vuelo.getLugarLlegada());
