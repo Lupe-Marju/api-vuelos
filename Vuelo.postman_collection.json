@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "460ba4e6-dd42-473e-891e-b663888e3004",
+		"name": "Vuelo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47428740",
+		"_collection_link": "https://lupe-marju-8784039.postman.co/workspace/Lupe-Marju's-Workspace~7d9dbdde-787c-483c-8d98-1bbbcac367d7/collection/47428740-460ba4e6-dd42-473e-891e-b663888e3004?action=share&source=collection_link&creator=47428740"
+	},
+	"item": [
+		{
+			"name": "Listar vuelos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vuelos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuelos"
+					],
+					"query": [
+						{
+							"key": "empresa",
+							"value": "turkish",
+							"disabled": true
+						},
+						{
+							"key": "fechaLlegada",
+							"value": "2025-09-05",
+							"disabled": true
+						},
+						{
+							"key": "lugarLlegada",
+							"value": "Barcelona",
+							"disabled": true
+						},
+						{
+							"key": "lugarSalida",
+							"value": "Buenos Aires",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "empresa",
+							"disabled": true
+						},
+						{
+							"key": "fechaSalida",
+							"value": "2025-09-05",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar vuelo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vuelos/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuelos",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar vuelo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreVuelo\": \"IB21231\",\r\n        \"empresa\": \"Iberia\",\r\n        \"lugarSalida\": \"Londres\",\r\n        \"lugarLlegada\": \"Barcelona\",\r\n        \"fechaSalida\": \"2025-09-19\",\r\n        \"fechaLlegada\": \"2025-09-20\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vuelos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuelos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar vuelo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vuelos/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuelos",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar vuelo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombreVuelo\": \"LV21231\",\r\n        \"empresa\": \"Level\",\r\n        \"lugarSalida\": \"Londres\",\r\n        \"lugarLlegada\": \"Barcelona\",\r\n        \"fechaSalida\": \"2025-09-20\",\r\n        \"fechaLlegada\": \"2025-09-20\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vuelos/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuelos",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
